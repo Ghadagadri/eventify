@@ -1,9 +1,16 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
+import DemoCarousel from './DemoCarousel '
+import Login from './Login'
+
 
 const Acceuil = () => {
   return (
     <div>
-    eventify
+    
+    <DemoCarousel/>
+    <Outlet/>
+
 
     </div>
     

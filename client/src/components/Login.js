@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { userLogin } from './js/userSlice/userSlice';
 
-const Login = () => {
+const Login = ({show, setshow}) => {
 	const isAuth = localStorage.getItem("token")
 	const [login, setLogin] = useState({
 		
@@ -17,7 +17,7 @@ const Login = () => {
 	return (
 
 
-		<div className="wrapper">
+		<div className="wrapper ">
 			<form  onSubmit={(e)=> e.preventDefault()} className="form-signin">
 				<h2 className="form-signin-heading">Please login</h2>
 				<input onChange={(e)=> setLogin({...login,email:e.target.value}) } type="text" className="form-control"  placeholder="Email Address" />
@@ -26,7 +26,7 @@ const Login = () => {
 				<button className="btn-primary"
 				 onClick={()=>{dispatch(userLogin(login))
 					setTimeout(() => {
-						navigate("/profil")
+						navigate("/home")
 					}, 1000);
 					setTimeout(() => {
 						window.location.reload()

@@ -1,0 +1,13 @@
+.events {
+    display: flex;
+  /* border: 1px solid;
+    width: 50vw; */
+  }
+  .swiper-con{
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    height: 240px;
+    /* border: 1px solid; */
+    margin: 5px 0;
+  }
